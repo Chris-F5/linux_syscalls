@@ -1,7 +1,9 @@
 #!/bin/bash
 
-linux=~/r/linux-6.4.7
+linux=./linux
 syscall_table=$linux/arch/x86/entry/syscalls/syscall_64.tbl
+
+git clone $linux_repo $linux
 
 find $linux -type f -name "*.c" \
   | xargs awk '
